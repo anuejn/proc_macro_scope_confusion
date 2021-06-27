@@ -1,0 +1,13 @@
+[package]
+name = "macros"
+version = "0.1.0"
+authors = ["Jaro Habiger <jarohabiger@googlemail.com>"]
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+quote = "1.0.9"
+proc-macro2 = { version = "1.0.26", features = ["span-locations"] }
+syn = { version = "1.0.68", features = ["full"] }
