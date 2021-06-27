@@ -6,6 +6,12 @@ macro_rules! normal_macro {
     } ;
 }
 
+macro_rules! call_macro {
+    ($name: ident, $($args:expr),*) => {
+        $name!($($args,)*)
+    }
+}
+
 fn main() {
     let a = "some string".to_owned();
 
